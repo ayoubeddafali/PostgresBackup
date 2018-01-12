@@ -1,49 +1,56 @@
-pgbackup 
+PostgresDB Backup
 ========
 
-CLI for backing up remote PostgesSQL databases locally or to AWS S3. 
+CLI for backing up remote PostgesSQL databases locally or to AWS S3
 
-Preparing for Development 
+Pre-requisites
+---------------
+
+::
+
+    $ chmod u+x install_docker_and_db.sh  && ./install_docker_and_db
+
+Preparing for Development
 --------------------------
 
-1. Ensure ``pip``, and ``pipenv`` are installed. 
+1. Ensure ``pip``, and ``pipenv`` are installed.
 2. Clone the repo: ``https://github.com/ayoubensalem/pgbackup``
 3. Fetch development dependencies : ``make install``
 
 
-Usage 
+Usage
 ------
 
-Pass in a full database URL, the storage driver, and destination. 
+Pass in a full database URL, the storage driver, and destination.
 
-S3 Example w/ bucket name: 
+S3 Example w/ bucket name:
 
 ::
 
-    $  pgbackup postgres://bob@example.com:5432/db_one --driver s3 backups 
+    $  pgbackup postgres://bob@example.com:5432/db_one --driver s3 backups
 
-Local Example w/ local path: 
+Local Example w/ local path:
 
-:: 
+::
 
     $ pgbackup postgres://bob@example.com:5432/db_one --driver local /var/local/db_one/backups/dump.sql
 
 
 
-Running Tests 
+Running Tests
 -------------
 
-Run tests locally using ``make`` if virtualenv is active: 
+Run tests locally using ``make`` if virtualenv is active:
 
-:: 
+::
 
-    $ make 
+    $ make
 
-If virtualenv isn't active then use: 
+If virtualenv isn't active then use:
 
-:: 
+::
 
-    $ pipenv run make 
+    $ pipenv run make
 
 
 
