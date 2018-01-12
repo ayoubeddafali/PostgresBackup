@@ -29,4 +29,15 @@ if __name__== "__main__":
     parser = create_parser()
     parser.parse_args()
 
+def main():
+    from pgbackup import pgdump, storage
+    args = create_parser().parse_args()
+    dump = pgdump.dump(args.url)
+    outfile = open(args.destination, "w")
+    storage.local(dump.stdout, outfile)
+
+
+
+
+
 
