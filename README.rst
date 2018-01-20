@@ -1,7 +1,7 @@
 PostgresDB Backup
 ========
 
-CLI for backing up remote PostgesSQL databases locally or to AWS S3
+CLI for backing up remote PostgesSQL databases locally 
 
 Pre-requisites
 ---------------
@@ -14,7 +14,7 @@ Preparing for Development
 --------------------------
 
 1. Ensure ``pip``, and ``pipenv`` are installed.
-2. Clone the repo: ``https://github.com/ayoubensalem/pgbackup``
+2. Clone the repo: ``https://github.com/ayoubensalem/PostgresBackup``
 3. Fetch development dependencies : ``make install``
 
 
@@ -23,11 +23,6 @@ Usage
 
 Pass in a full database URL, the storage driver, and destination.
 
-S3 Example w/ bucket name:
-
-::
-
-    $  pgbackup postgres://bob@example.com:5432/db_one --driver s3 backups
 
 Local Example w/ local path:
 
